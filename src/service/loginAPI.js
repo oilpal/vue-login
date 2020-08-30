@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const getUserInfo = (uid, password) => {
-	return axios.get('/endpoint-for-get-user-info', {
+	return axios.get('http://localhost:9197/get_user_info', {
 		params: {
 			uid: uid,
 			password: password,
@@ -10,7 +10,7 @@ const getUserInfo = (uid, password) => {
 }
 
 const isFinished = uid => {
-	return axios.get('/endpoint-for-is-finished', {
+	return axios.get('http://localhost:9197/get_user_info', {
 		params: {
 			uid: uid,
 		},
